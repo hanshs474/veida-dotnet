@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;netstandard2.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <PackageId>Veida</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Veida</Authors>
+    <Description>Generate images from .NET with no API key and no account, via the free tier of veida.ai.</Description>
+    <PackageTags>image-generation;ai;text-to-image;no-api-key;chatgpt-image</PackageTags>
+    <PackageProjectUrl>https://veida.ai</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hanshs474/veida-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+</Project>
